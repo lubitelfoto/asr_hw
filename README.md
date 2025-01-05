@@ -14,6 +14,13 @@ To train a model, run the following command:
 python train.py
 ```
 
+To download model:
+
+```bash
+python3 model_download.py
+```
+
+
 To run inference (evaluate the model or save predictions):
 
 ```bash
