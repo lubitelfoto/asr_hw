@@ -69,7 +69,6 @@ def get_dataloaders(config, text_encoder, device):
     # dataloaders init
     dataloaders = {}
     for dataset_partition in config.datasets.keys():
-        dataset = datasets[dataset_partition]
         # dataset partition init
         dataset = instantiate(
             config.datasets[dataset_partition], text_encoder=text_encoder
@@ -79,6 +78,7 @@ def get_dataloaders(config, text_encoder, device):
             f"The batch size ({config.dataloader.batch_size}) cannot "
             f"be larger than the dataset length ({len(dataset)})"
         )
+
 
         partition_dataloader = instantiate(
             config.dataloader,
