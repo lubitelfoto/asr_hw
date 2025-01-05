@@ -43,13 +43,15 @@ def move_batch_transforms_to_device(batch_transforms, device):
                 transforms[transform_name] = transforms[transform_name].to(device)
 
 
-def get_dataloaders(config, device):
+def get_dataloaders(config, text_encoder, device):
     """
     Create dataloaders for each of the dataset partitions.
     Also creates instance and batch transforms.
 
     Args:
         config (DictConfig): hydra experiment config.
+        text_encoder (CTCTextEncoder): instance of the text encoder
+            for the datasets.
         device (str): device to use for batch transforms.
     Returns:
         dataloaders (dict[DataLoader]): dict containing dataloader for a
@@ -58,17 +60,20 @@ def get_dataloaders(config, device):
             should be applied on the whole batch. Depend on the
             tensor name.
     """
+    
+    
     # transforms or augmentations init
     batch_transforms = instantiate(config.transforms.batch_transforms)
     move_batch_transforms_to_device(batch_transforms, device)
-
-    # dataset partitions init
-    datasets = instantiate(config.datasets)  # instance transforms are defined inside
 
     # dataloaders init
     dataloaders = {}
     for dataset_partition in config.datasets.keys():
         dataset = datasets[dataset_partition]
+        # dataset partition init
+        dataset = instantiate(
+            config.datasets[dataset_partition], text_encoder=text_encoder
+        )  # instance transforms are defined inside
 
         assert config.dataloader.batch_size <= len(dataset), (
             f"The batch size ({config.dataloader.batch_size}) cannot "
@@ -83,6 +88,10 @@ def get_dataloaders(config, device):
             shuffle=(dataset_partition == "train"),
             worker_init_fn=set_worker_seed,
         )
+
+        
         dataloaders[dataset_partition] = partition_dataloader
+        
+
 
     return dataloaders, batch_transforms

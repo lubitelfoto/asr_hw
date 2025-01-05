@@ -1,4 +1,4 @@
-# PyTorch Template for DL projects
+# Automatic Speech Recognition (ASR) with PyTorch
 
 <p align="center">
   <a href="#about">About</a> •
@@ -6,7 +6,6 @@
   <a href="#examples">Examples</a> •
   <a href="#installation">Installation</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#useful-links">Useful Links</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
@@ -22,8 +21,9 @@
 
 ## About
 
-This repository contains a template for [PyTorch](https://pytorch.org/)-based Deep Learning projects.
+This repository contains a template for solving ASR task with PyTorch. This template branch is a part of the [HSE DLA course](https://github.com/markovka17/dla) ASR homework. Some parts of the code are missing (or do not follow the most optimal design choices...) and students are required to fill these parts themselves (as well as writing their own models, etc.).
 
+<<<<<<< HEAD
 The template utilizes different python-dev techniques to improve code readability. Configuration methods enhance reproducibility and experiments control.
 
 The repository is released as a part of the [HSE DLA course](https://github.com/markovka17/dla), however, can easily be adopted for any DL-task.
@@ -60,10 +60,13 @@ You can find examples of this template completed for different tasks in other br
 - [Image classification](https://github.com/Blinorot/pytorch_project_template/tree/example/image-classification): simple classification problem on [MNIST](https://yann.lecun.com/exdb/mnist/) and [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) datasets.
 
 - [ASR](https://github.com/Blinorot/pytorch_project_template/tree/example/asr): template for the automatic speech recognition (ASR) task. Some of the parts (for example, `collate_fn` and beam search for `text_encoder`) are missing for studying purposes of [HSE DLA course](https://github.com/markovka17/dla).
+=======
+See the task assignment [here](https://github.com/markovka17/dla/tree/2024/hw1_asr).
+>>>>>>> my_branch
 
 ## Installation
 
-Installation may depend on your task. The general steps are the following:
+Follow these steps to install the project:
 
 0. (Optional) Create and activate new environment using [`conda`](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) or `venv` ([`+pyenv`](https://github.com/pyenv/pyenv)).
 
@@ -131,7 +134,7 @@ You may find the following links useful:
 
 ## Credits
 
-This repository is based on a heavily modified fork of [pytorch-template](https://github.com/victoresque/pytorch-template) and [asr_project_template](https://github.com/WrathOfGrapes/asr_project_template) repositories.
+This repository is based on a [PyTorch Project Template](https://github.com/Blinorot/pytorch_project_template).
 
 ## License
 
