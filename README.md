@@ -20,8 +20,8 @@ To run inference (evaluate the model or save predictions):
 python3 inference.py
 ```
 
-##Микро-отчет
+## Микро-отчет
 
 Там явно что-то не то, лосс из отрицательного быстро выходит на плато ~2.35 и зависает там,
 без градиент клиппинга градиент норм за несколько эпох уходит в бесконечность.
-[Ссылка на wandb](https://wandb.ai/titan_foundation/pytorch_template_asr_example/runs/00ddzkfc?nw=nwuserhydrophonyx)
+[Ссылка на wandb](https://wandb.ai/titan_foundation/pytorch_template_asr_example/reports/Untitled-Report--VmlldzoxMDgyMzg0OQ)
