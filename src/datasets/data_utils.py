@@ -60,6 +60,8 @@ def get_dataloaders(config, text_encoder, device):
             should be applied on the whole batch. Depend on the
             tensor name.
     """
+    
+    
     # transforms or augmentations init
     batch_transforms = instantiate(config.transforms.batch_transforms)
     move_batch_transforms_to_device(batch_transforms, device)
@@ -77,6 +79,7 @@ def get_dataloaders(config, text_encoder, device):
             f"be larger than the dataset length ({len(dataset)})"
         )
 
+
         partition_dataloader = instantiate(
             config.dataloader,
             dataset=dataset,
@@ -85,6 +88,10 @@ def get_dataloaders(config, text_encoder, device):
             shuffle=(dataset_partition == "train"),
             worker_init_fn=set_worker_seed,
         )
+
+        
         dataloaders[dataset_partition] = partition_dataloader
+        
+
 
     return dataloaders, batch_transforms

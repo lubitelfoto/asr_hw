@@ -77,6 +77,7 @@ class BaseTrainer:
 
         # define dataloaders
         self.train_dataloader = dataloaders["train"]
+       
         if epoch_len is None:
             # epoch-based training
             self.epoch_len = len(self.train_dataloader)
@@ -220,6 +221,7 @@ class BaseTrainer:
                     continue
                 else:
                     raise e
+      
 
             self.train_metrics.update("grad_norm", self._get_grad_norm())
 
