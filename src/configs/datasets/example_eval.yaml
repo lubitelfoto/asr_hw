@@ -1,0 +1,4 @@
+eval:
+  _target_: src.datasets.LibrispeechDataset
+  part: "dev-other"
+  instance_transforms: ${transforms.instance_transforms.train}

@@ -12,7 +12,7 @@ class DeepSpeech2Model(nn.Module):
             nn.ReLU(),
             nn.Conv2d(32, 32, kernel_size=(21, 11), stride=(2, 1), padding=(10, 5)),
             nn.BatchNorm2d(32),
-            nn.ReLU()
+            nn.ReLU(),
         )
 
         self.rnn = None
@@ -40,56 +40,43 @@ class DeepSpeech2Model(nn.Module):
 
     def forward(self, spectrogram, spectrogram_length, **kwargs):
         """
-        Прямой проход через модель. Обрабатывает входной спектрограммы и возвращает предсказания
-        и длины выходных данных.
-        
         Args:
             spectrogram (torch.Tensor): Входная спектрограмма [batch_size, time, freq].
             spectrogram_length (torch.Tensor): Длины спектрограмм в пакете.
-    
+
         Returns:
             dict: Словарь с выходными данными:
                 - "log_probs": Логарифмические вероятности (torch.Tensor).
                 - "input_lengths": Длины выходов после обработки (torch.Tensor).
         """
-        # Удаляем лишнюю размерность, если spectrogram имеет 4 измерения
+
         if spectrogram.dim() == 4:
             spectrogram = spectrogram.squeeze(1)
-    
-        # Добавляем канал и пропускаем через свёрточный слой
-        x = spectrogram.unsqueeze(1)  # [batch_size, 1, time, freq]
+
+        x = spectrogram.unsqueeze(1)
         x = self.conv(x)
-    
-        # Получаем размеры выхода после свёртки
+
         batch_size, channels, height, width = x.shape
-        if self.rnn is None:  # Инициализация RNN при первом вызове
+        if self.rnn is None:
             self._initialize_rnn(height * channels)
-    
-        # Вычисляем длины входов после свёрточных слоёв
+
         input_lengths = self.calculate_conv_output_dim(
             spectrogram_length, kernel_size=11, stride=2, padding=5
         )
         input_lengths = self.calculate_conv_output_dim(
             input_lengths, kernel_size=11, stride=1, padding=5
         )
-    
-        # Перестановка осей для подачи в RNN
-        x = x.permute(0, 3, 1, 2).contiguous()  # [batch_size, time, channels, features]
-        x = x.view(x.size(0), x.size(1), -1)  # [batch_size, time, features]
-    
-        # Пропуск через RNN и полносвязный слой
+
+        x = x.permute(0, 3, 1, 2).contiguous()
+        x = x.view(x.size(0), x.size(1), -1)
+
         x, _ = self.rnn(x)
         log_probs = self.fc(x)
-    
-        # Возврат результата
+
         return {
-            "log_probs": log_probs,         # Логарифмические вероятности
-            "log_probs_length": input_lengths,  # Длины выходов после обработки
+            "log_probs": log_probs,
+            "log_probs_length": input_lengths,
         }
-
-
-
-
 
     def __str__(self):
         """
@@ -106,7 +93,6 @@ class DeepSpeech2Model(nn.Module):
 
         return result_info
 
-
     def check_cpu_tensors(self):
         """
         Печатает параметры и буферы модели, которые находятся на CPU.
@@ -115,7 +101,7 @@ class DeepSpeech2Model(nn.Module):
         for name, param in self.named_parameters():
             if param.device.type == "cpu":
                 print(f"Parameter '{name}' is on CPU with shape {param.shape}")
-        
+
         for name, buffer in self.named_buffers():
             if buffer.device.type == "cpu":
                 print(f"Buffer '{name}' is on CPU with shape {buffer.shape}")
