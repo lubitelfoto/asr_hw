@@ -17,14 +17,14 @@ python train.py
 To download model:
 
 ```bash
-python3 model_download.py
+python model_download.py
 ```
 
 
 To run inference (evaluate the model or save predictions):
 
 ```bash
-python3 inference.py
+python inference.py
 ```
 
 ## Микро-отчет
