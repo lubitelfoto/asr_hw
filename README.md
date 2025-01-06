@@ -21,10 +21,11 @@ python model_download.py
 ```
 
 
-To run inference (evaluate the model or save predictions):
+To run inference:
+The transcription file must be as in the librispeech dataset - file name without extension space transcription
 
 ```bash
-python inference.py
+python inference.py ++datasets.eval.audio_dir=path/to/audio ++datasets.eval.transcription_file=path/to/txt/file/
 ```
 
 ## Микро-отчет

@@ -1,0 +1,5 @@
+eval:
+  _target_: src.datasets.MyCustomDirAudioDataset
+  audio_dir:
+  transcription_file:
+  instance_transforms: ${transforms.instance_transforms.train}
