@@ -3,7 +3,7 @@ from torch.nn import Sequential
 
 
 class DeepSpeech2Model(nn.Module):
-    def __init__(self, input_dim=80, n_tokens=29):
+    def __init__(self, input_dim=128, n_tokens=29):
         super().__init__()
 
         self.conv = nn.Sequential(
@@ -15,24 +15,33 @@ class DeepSpeech2Model(nn.Module):
             nn.ReLU(),
         )
 
-        self.rnn = None
-        self.fc = nn.Linear(128 * 2, n_tokens)
+        # Рассчитываем размер выхода сверточной части
+        conv_output_dim = self._calculate_conv_output_dim(input_dim)
 
-    def _initialize_rnn(self, input_dim):
-        """
-        Инициализация RNN после расчёта реального размера выхода.
-        """
-        self.rnn_input_dim = input_dim
+        # Инициализируем RNN
         self.rnn = nn.GRU(
-            input_size=self.rnn_input_dim,
+            input_size=conv_output_dim,
             hidden_size=128,
             num_layers=2,
             batch_first=True,
             bidirectional=True,
             dropout=0.1,
         )
-        # Перемещение RNN на то же устройство, что и остальные параметры модели
-        self.rnn = self.rnn.to(next(self.parameters()).device)
+
+        self.fc = nn.Linear(128 * 2, n_tokens)
+
+    def _calculate_conv_output_dim(self, input_dim):
+        """
+        Рассчитывает размер выхода сверточной части.
+        """
+        freq = input_dim
+        freq = self.calculate_conv_output_dim(
+            freq, kernel_size=41, stride=2, padding=20
+        )
+        freq = self.calculate_conv_output_dim(
+            freq, kernel_size=21, stride=2, padding=10
+        )
+        return freq * 32  # 32 — количество каналов
 
     @staticmethod
     def calculate_conv_output_dim(input_dim, kernel_size, stride, padding):
@@ -50,6 +59,8 @@ class DeepSpeech2Model(nn.Module):
                 - "input_lengths": Длины выходов после обработки (torch.Tensor).
         """
 
+        # print(f"deepspeech2.py spectrogram.shape {spectrogram.shape} spectrogram_length {spectrogram_length.shape}")
+
         if spectrogram.dim() == 4:
             spectrogram = spectrogram.squeeze(1)
 
@@ -57,8 +68,6 @@ class DeepSpeech2Model(nn.Module):
         x = self.conv(x)
 
         batch_size, channels, height, width = x.shape
-        if self.rnn is None:
-            self._initialize_rnn(height * channels)
 
         input_lengths = self.calculate_conv_output_dim(
             spectrogram_length, kernel_size=11, stride=2, padding=5
