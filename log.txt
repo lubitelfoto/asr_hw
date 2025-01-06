@@ -1,0 +1,485 @@
+2025-01-06 12:41:01,082 - train - INFO - DeepSpeech2Model(
+  (conv): Sequential(
+    (0): Conv2d(1, 32, kernel_size=(41, 11), stride=(2, 2), padding=(20, 5))
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Conv2d(32, 32, kernel_size=(21, 11), stride=(2, 1), padding=(10, 5))
+    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+  )
+  (rnn): GRU(1024, 128, num_layers=2, batch_first=True, dropout=0.1, bidirectional=True)
+  (fc): Linear(in_features=256, out_features=28, bias=True)
+)
+All parameters: 1441084
+Trainable parameters: 1441084
+2025-01-06 12:41:29,971 - train - INFO -     epoch          : 1
+2025-01-06 12:41:29,971 - train - INFO -     loss           : -1.5152711415290832
+2025-01-06 12:41:29,971 - train - INFO -     grad_norm      : 0.9999999725818634
+2025-01-06 12:41:29,971 - train - INFO -     val_loss       : -0.42837812044963625
+2025-01-06 12:41:29,972 - train - INFO -     val_CER_(Argmax): 0.9526667350379688
+2025-01-06 12:41:29,972 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:41:29,972 - train - INFO -     test_loss      : -0.4431464062107883
+2025-01-06 12:41:29,972 - train - INFO -     test_CER_(Argmax): 0.9569753128929045
+2025-01-06 12:41:29,972 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:41:29,995 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:41:56,293 - train - INFO -     epoch          : 2
+2025-01-06 12:41:56,293 - train - INFO -     loss           : 1.2820692443847657
+2025-01-06 12:41:56,293 - train - INFO -     grad_norm      : 0.99999990940094
+2025-01-06 12:41:56,293 - train - INFO -     val_loss       : 1.9971856406693969
+2025-01-06 12:41:56,293 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:41:56,294 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:41:56,294 - train - INFO -     test_loss      : 1.999258150581185
+2025-01-06 12:41:56,294 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:41:56,294 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:41:56,349 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:42:22,880 - train - INFO -     epoch          : 3
+2025-01-06 12:42:22,880 - train - INFO -     loss           : 2.8043908357620237
+2025-01-06 12:42:22,880 - train - INFO -     grad_norm      : 0.9980849277973175
+2025-01-06 12:42:22,880 - train - INFO -     val_loss       : 2.96055007244828
+2025-01-06 12:42:22,880 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:42:22,880 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:42:22,880 - train - INFO -     test_loss      : 2.960516295360245
+2025-01-06 12:42:22,881 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:42:22,881 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:42:22,932 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:42:49,096 - train - INFO -     epoch          : 4
+2025-01-06 12:42:49,097 - train - INFO -     loss           : 2.860627088546753
+2025-01-06 12:42:49,097 - train - INFO -     grad_norm      : 0.9771732485294342
+2025-01-06 12:42:49,097 - train - INFO -     val_loss       : 3.081158481400831
+2025-01-06 12:42:49,097 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:42:49,097 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:42:49,097 - train - INFO -     test_loss      : 3.0865282029595993
+2025-01-06 12:42:49,098 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:42:49,098 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:42:49,151 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:43:15,542 - train - INFO -     epoch          : 5
+2025-01-06 12:43:15,542 - train - INFO -     loss           : 2.8634233903884887
+2025-01-06 12:43:15,542 - train - INFO -     grad_norm      : 0.9780980372428894
+2025-01-06 12:43:15,542 - train - INFO -     val_loss       : 2.8914408032744574
+2025-01-06 12:43:15,543 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:43:15,543 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:43:15,543 - train - INFO -     test_loss      : 2.8961159509556893
+2025-01-06 12:43:15,543 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:43:15,543 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:43:15,596 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:43:41,840 - train - INFO -     epoch          : 6
+2025-01-06 12:43:41,840 - train - INFO -     loss           : 2.8466327714920046
+2025-01-06 12:43:41,841 - train - INFO -     grad_norm      : 0.9510889077186584
+2025-01-06 12:43:41,841 - train - INFO -     val_loss       : 2.79506585958699
+2025-01-06 12:43:41,841 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:43:41,841 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:43:41,841 - train - INFO -     test_loss      : 2.8022534392262233
+2025-01-06 12:43:41,841 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:43:41,841 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:43:41,895 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:44:08,146 - train - INFO -     epoch          : 7
+2025-01-06 12:44:08,146 - train - INFO -     loss           : 2.850801944732666
+2025-01-06 12:44:08,146 - train - INFO -     grad_norm      : 0.9892028403282166
+2025-01-06 12:44:08,146 - train - INFO -     val_loss       : 3.065929470906838
+2025-01-06 12:44:08,147 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:44:08,147 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:44:08,147 - train - INFO -     test_loss      : 3.07798490360493
+2025-01-06 12:44:08,147 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:44:08,147 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:44:08,196 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:44:41,348 - train - INFO -     epoch          : 8
+2025-01-06 12:44:41,349 - train - INFO -     loss           : 2.8367746114730834
+2025-01-06 12:44:41,349 - train - INFO -     grad_norm      : 0.9811398208141326
+2025-01-06 12:44:41,349 - train - INFO -     val_loss       : 2.917386534469154
+2025-01-06 12:44:41,349 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:44:41,349 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:44:41,349 - train - INFO -     test_loss      : 2.920752224121385
+2025-01-06 12:44:41,349 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:44:41,349 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:44:41,403 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:45:07,958 - train - INFO -     epoch          : 9
+2025-01-06 12:45:07,958 - train - INFO -     loss           : 2.8281166839599607
+2025-01-06 12:45:07,958 - train - INFO -     grad_norm      : 0.9849127054214477
+2025-01-06 12:45:07,958 - train - INFO -     val_loss       : 2.876680635438194
+2025-01-06 12:45:07,959 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:45:07,959 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:45:07,959 - train - INFO -     test_loss      : 2.8810895399282908
+2025-01-06 12:45:07,959 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:45:07,959 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:45:08,013 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:45:34,355 - train - INFO -     epoch          : 10
+2025-01-06 12:45:34,355 - train - INFO -     loss           : 2.783375344276428
+2025-01-06 12:45:34,356 - train - INFO -     grad_norm      : 0.9923263037204743
+2025-01-06 12:45:34,356 - train - INFO -     val_loss       : 2.9316669231851162
+2025-01-06 12:45:34,356 - train - INFO -     val_CER_(Argmax): 1.0
+2025-01-06 12:45:34,356 - train - INFO -     val_WER_(Argmax): 1.0
+2025-01-06 12:45:34,356 - train - INFO -     test_loss      : 2.9241870787307507
+2025-01-06 12:45:34,356 - train - INFO -     test_CER_(Argmax): 1.0
+2025-01-06 12:45:34,356 - train - INFO -     test_WER_(Argmax): 1.0
+2025-01-06 12:45:34,409 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:46:00,773 - train - INFO -     epoch          : 11
+2025-01-06 12:46:00,773 - train - INFO -     loss           : 2.5906256246566772
+2025-01-06 12:46:00,773 - train - INFO -     grad_norm      : 0.9999995350837707
+2025-01-06 12:46:00,773 - train - INFO -     val_loss       : 3.0989525995571237
+2025-01-06 12:46:00,774 - train - INFO -     val_CER_(Argmax): 0.9875981730501825
+2025-01-06 12:46:00,774 - train - INFO -     val_WER_(Argmax): 0.9999884686346863
+2025-01-06 12:46:00,774 - train - INFO -     test_loss      : 3.0924540284935755
+2025-01-06 12:46:00,774 - train - INFO -     test_CER_(Argmax): 0.9860278151203407
+2025-01-06 12:46:00,774 - train - INFO -     test_WER_(Argmax): 0.999992931863161
+2025-01-06 12:46:00,827 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:46:27,162 - train - INFO -     epoch          : 12
+2025-01-06 12:46:27,162 - train - INFO -     loss           : 2.432788858413696
+2025-01-06 12:46:27,163 - train - INFO -     grad_norm      : 0.9999995732307434
+2025-01-06 12:46:27,163 - train - INFO -     val_loss       : 3.083436848052753
+2025-01-06 12:46:27,163 - train - INFO -     val_CER_(Argmax): 0.9643240976463172
+2025-01-06 12:46:27,163 - train - INFO -     val_WER_(Argmax): 0.9976931499993659
+2025-01-06 12:46:27,163 - train - INFO -     test_loss      : 3.074318199667312
+2025-01-06 12:46:27,163 - train - INFO -     test_CER_(Argmax): 0.9629804822199123
+2025-01-06 12:46:27,163 - train - INFO -     test_WER_(Argmax): 0.9985859291143945
+2025-01-06 12:46:27,213 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:46:53,390 - train - INFO -     epoch          : 13
+2025-01-06 12:46:53,391 - train - INFO -     loss           : 2.325285029411316
+2025-01-06 12:46:53,391 - train - INFO -     grad_norm      : 0.999999532699585
+2025-01-06 12:46:53,391 - train - INFO -     val_loss       : 2.3964800095646144
+2025-01-06 12:46:53,391 - train - INFO -     val_CER_(Argmax): 0.735247291470127
+2025-01-06 12:46:53,391 - train - INFO -     val_WER_(Argmax): 0.9820358945346307
+2025-01-06 12:46:53,391 - train - INFO -     test_loss      : 2.3404906160048857
+2025-01-06 12:46:53,392 - train - INFO -     test_CER_(Argmax): 0.7306117622942337
+2025-01-06 12:46:53,392 - train - INFO -     test_WER_(Argmax): 0.9826335039221954
+2025-01-06 12:46:53,444 - train - INFO - Saving current best: model_best.pth ...
+2025-01-06 12:47:20,071 - train - INFO -     epoch          : 14
+2025-01-06 12:47:20,071 - train - INFO -     loss           : 2.194084870815277
+2025-01-06 12:47:20,071 - train - INFO -     grad_norm      : 0.9999994921684265
+2025-01-06 12:47:20,071 - train - INFO -     val_loss       : 2.618346073530697
+2025-01-06 12:47:20,072 - train - INFO -     val_CER_(Argmax): 0.6800864000134772
+2025-01-06 12:47:20,072 - train - INFO -     val_WER_(Argmax): 0.993543314765498
+2025-01-06 12:47:20,072 - train - INFO -     test_loss      : 2.557744647710378
+2025-01-06 12:47:20,072 - train - INFO -     test_CER_(Argmax): 0.6748401844274085
+2025-01-06 12:47:20,072 - train - INFO -     test_WER_(Argmax): 0.9894340718635335
+2025-01-06 12:47:46,863 - train - INFO -     epoch          : 15
+2025-01-06 12:47:46,863 - train - INFO -     loss           : 2.1252896428108214
+2025-01-06 12:47:46,863 - train - INFO -     grad_norm      : 0.9999995255470275
+2025-01-06 12:47:46,864 - train - INFO -     val_loss       : 2.4378220595116984
+2025-01-06 12:47:46,864 - train - INFO -     val_CER_(Argmax): 0.6224206758325282
+2025-01-06 12:47:46,864 - train - INFO -     val_WER_(Argmax): 1.1268355831194814
+2025-01-06 12:47:46,864 - train - INFO -     test_loss      : 2.399105366859727
+2025-01-06 12:47:46,864 - train - INFO -     test_CER_(Argmax): 0.6099936303980518
+2025-01-06 12:47:46,864 - train - INFO -     test_WER_(Argmax): 1.125736251846449
+2025-01-06 12:47:46,888 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch15.pth ...
+2025-01-06 12:48:13,614 - train - INFO -     epoch          : 16
+2025-01-06 12:48:13,614 - train - INFO -     loss           : 2.0629657459259034
+2025-01-06 12:48:13,614 - train - INFO -     grad_norm      : 0.9999994897842407
+2025-01-06 12:48:13,615 - train - INFO -     val_loss       : 2.2756774504686192
+2025-01-06 12:48:13,615 - train - INFO -     val_CER_(Argmax): 0.6717892399330949
+2025-01-06 12:48:13,615 - train - INFO -     val_WER_(Argmax): 1.019592960925232
+2025-01-06 12:48:13,615 - train - INFO -     test_loss      : 2.227738489631478
+2025-01-06 12:48:13,615 - train - INFO -     test_CER_(Argmax): 0.6620403045239807
+2025-01-06 12:48:13,615 - train - INFO -     test_WER_(Argmax): 1.0128673102288144
+2025-01-06 12:48:40,071 - train - INFO -     epoch          : 17
+2025-01-06 12:48:40,071 - train - INFO -     loss           : 1.9942654180526733
+2025-01-06 12:48:40,071 - train - INFO -     grad_norm      : 0.9999994969367981
+2025-01-06 12:48:40,072 - train - INFO -     val_loss       : 2.1795399554101302
+2025-01-06 12:48:40,072 - train - INFO -     val_CER_(Argmax): 0.6266088779144918
+2025-01-06 12:48:40,072 - train - INFO -     val_WER_(Argmax): 1.039178732712862
+2025-01-06 12:48:40,072 - train - INFO -     test_loss      : 2.1273104025207403
+2025-01-06 12:48:40,072 - train - INFO -     test_CER_(Argmax): 0.6145239654150133
+2025-01-06 12:48:40,072 - train - INFO -     test_WER_(Argmax): 1.0304607392300114
+2025-01-06 12:49:06,400 - train - INFO -     epoch          : 18
+2025-01-06 12:49:06,400 - train - INFO -     loss           : 1.9437216162681579
+2025-01-06 12:49:06,401 - train - INFO -     grad_norm      : 0.9999995160102845
+2025-01-06 12:49:06,401 - train - INFO -     val_loss       : 2.506472589344996
+2025-01-06 12:49:06,401 - train - INFO -     val_CER_(Argmax): 0.6525235220322414
+2025-01-06 12:49:06,401 - train - INFO -     val_WER_(Argmax): 1.0428921351459157
+2025-01-06 12:49:06,401 - train - INFO -     test_loss      : 2.470058893429414
+2025-01-06 12:49:06,401 - train - INFO -     test_CER_(Argmax): 0.6452399344490125
+2025-01-06 12:49:06,401 - train - INFO -     test_WER_(Argmax): 1.0408658695969708
+2025-01-06 12:49:32,708 - train - INFO -     epoch          : 19
+2025-01-06 12:49:32,708 - train - INFO -     loss           : 1.9318020701408387
+2025-01-06 12:49:32,709 - train - INFO -     grad_norm      : 0.9999995279312134
+2025-01-06 12:49:32,709 - train - INFO -     val_loss       : 2.4250864806650307
+2025-01-06 12:49:32,709 - train - INFO -     val_CER_(Argmax): 0.695693696080061
+2025-01-06 12:49:32,709 - train - INFO -     val_WER_(Argmax): 0.9935293239865095
+2025-01-06 12:49:32,709 - train - INFO -     test_loss      : 2.3939116101228555
+2025-01-06 12:49:32,709 - train - INFO -     test_CER_(Argmax): 0.6898716874764661
+2025-01-06 12:49:32,709 - train - INFO -     test_WER_(Argmax): 0.99035278002104
+2025-01-06 12:49:59,168 - train - INFO -     epoch          : 20
+2025-01-06 12:49:59,168 - train - INFO -     loss           : 1.8819902205467225
+2025-01-06 12:49:59,168 - train - INFO -     grad_norm      : 0.9999994671344757
+2025-01-06 12:49:59,168 - train - INFO -     val_loss       : 2.14237987423295
+2025-01-06 12:49:59,168 - train - INFO -     val_CER_(Argmax): 0.618168151343863
+2025-01-06 12:49:59,168 - train - INFO -     val_WER_(Argmax): 1.0090996452113483
+2025-01-06 12:49:59,168 - train - INFO -     test_loss      : 2.081879864212211
+2025-01-06 12:49:59,169 - train - INFO -     test_CER_(Argmax): 0.6058888880388401
+2025-01-06 12:49:59,169 - train - INFO -     test_WER_(Argmax): 1.0036495087572586
+2025-01-06 12:49:59,193 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch20.pth ...
+2025-01-06 12:50:25,933 - train - INFO -     epoch          : 21
+2025-01-06 12:50:25,933 - train - INFO -     loss           : 1.8591968250274657
+2025-01-06 12:50:25,934 - train - INFO -     grad_norm      : 0.9999995160102845
+2025-01-06 12:50:25,934 - train - INFO -     val_loss       : 2.0974644374143594
+2025-01-06 12:50:25,934 - train - INFO -     val_CER_(Argmax): 0.584224255308462
+2025-01-06 12:50:25,934 - train - INFO -     val_WER_(Argmax): 1.079834081997193
+2025-01-06 12:50:25,934 - train - INFO -     test_loss      : 2.0290227805385155
+2025-01-06 12:50:25,934 - train - INFO -     test_CER_(Argmax): 0.5687497504261713
+2025-01-06 12:50:25,934 - train - INFO -     test_WER_(Argmax): 1.075484923855901
+2025-01-06 12:50:52,523 - train - INFO -     epoch          : 22
+2025-01-06 12:50:52,523 - train - INFO -     loss           : 1.8310791206359864
+2025-01-06 12:50:52,523 - train - INFO -     grad_norm      : 0.9999995076656342
+2025-01-06 12:50:52,523 - train - INFO -     val_loss       : 1.9319094401883903
+2025-01-06 12:50:52,523 - train - INFO -     val_CER_(Argmax): 0.5646444051733358
+2025-01-06 12:50:52,524 - train - INFO -     val_WER_(Argmax): 1.0808617304824382
+2025-01-06 12:50:52,524 - train - INFO -     test_loss      : 1.8592055403549252
+2025-01-06 12:50:52,524 - train - INFO -     test_CER_(Argmax): 0.5476224836161769
+2025-01-06 12:50:52,524 - train - INFO -     test_WER_(Argmax): 1.0737743184489101
+2025-01-06 12:51:19,108 - train - INFO -     epoch          : 23
+2025-01-06 12:51:19,108 - train - INFO -     loss           : 1.7798298192024231
+2025-01-06 12:51:19,108 - train - INFO -     grad_norm      : 0.9999995517730713
+2025-01-06 12:51:19,109 - train - INFO -     val_loss       : 2.378282142301327
+2025-01-06 12:51:19,109 - train - INFO -     val_CER_(Argmax): 0.6203650896201879
+2025-01-06 12:51:19,109 - train - INFO -     val_WER_(Argmax): 1.119269040509786
+2025-01-06 12:51:19,109 - train - INFO -     test_loss      : 2.314268179522216
+2025-01-06 12:51:19,109 - train - INFO -     test_CER_(Argmax): 0.6074409482986527
+2025-01-06 12:51:19,109 - train - INFO -     test_WER_(Argmax): 1.121332832523954
+2025-01-06 12:51:46,039 - train - INFO -     epoch          : 24
+2025-01-06 12:51:46,039 - train - INFO -     loss           : 1.789815022945404
+2025-01-06 12:51:46,039 - train - INFO -     grad_norm      : 0.9999995052814483
+2025-01-06 12:51:46,039 - train - INFO -     val_loss       : 1.8876734065833567
+2025-01-06 12:51:46,040 - train - INFO -     val_CER_(Argmax): 0.5453351909646914
+2025-01-06 12:51:46,040 - train - INFO -     val_WER_(Argmax): 0.995535569194281
+2025-01-06 12:51:46,040 - train - INFO -     test_loss      : 1.8155211938246516
+2025-01-06 12:51:46,040 - train - INFO -     test_CER_(Argmax): 0.5280146824549368
+2025-01-06 12:51:46,040 - train - INFO -     test_WER_(Argmax): 0.9885514144366054
+2025-01-06 12:52:12,671 - train - INFO -     epoch          : 25
+2025-01-06 12:52:12,672 - train - INFO -     loss           : 1.7624863934516908
+2025-01-06 12:52:12,672 - train - INFO -     grad_norm      : 0.9999995076656342
+2025-01-06 12:52:12,672 - train - INFO -     val_loss       : 2.1879711102735513
+2025-01-06 12:52:12,672 - train - INFO -     val_CER_(Argmax): 0.5680913953814277
+2025-01-06 12:52:12,672 - train - INFO -     val_WER_(Argmax): 1.0596112229951509
+2025-01-06 12:52:12,672 - train - INFO -     test_loss      : 2.1144124460584335
+2025-01-06 12:52:12,672 - train - INFO -     test_CER_(Argmax): 0.5520757387647368
+2025-01-06 12:52:12,673 - train - INFO -     test_WER_(Argmax): 1.0531393844988866
+2025-01-06 12:52:12,697 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch25.pth ...
+2025-01-06 12:52:39,137 - train - INFO -     epoch          : 26
+2025-01-06 12:52:39,137 - train - INFO -     loss           : 1.7349966669082642
+2025-01-06 12:52:39,137 - train - INFO -     grad_norm      : 0.9999995291233063
+2025-01-06 12:52:39,137 - train - INFO -     val_loss       : 1.8812601913825173
+2025-01-06 12:52:39,138 - train - INFO -     val_CER_(Argmax): 0.5396881150797527
+2025-01-06 12:52:39,138 - train - INFO -     val_WER_(Argmax): 1.0310306743386848
+2025-01-06 12:52:39,138 - train - INFO -     test_loss      : 1.794873416878795
+2025-01-06 12:52:39,138 - train - INFO -     test_CER_(Argmax): 0.5212995818229611
+2025-01-06 12:52:39,138 - train - INFO -     test_WER_(Argmax): 1.0132818851740808
+2025-01-06 12:53:06,002 - train - INFO -     epoch          : 27
+2025-01-06 12:53:06,003 - train - INFO -     loss           : 1.7521662187576295
+2025-01-06 12:53:06,003 - train - INFO -     grad_norm      : 0.999999498128891
+2025-01-06 12:53:06,003 - train - INFO -     val_loss       : 2.0283463485126565
+2025-01-06 12:53:06,003 - train - INFO -     val_CER_(Argmax): 0.5676705578302658
+2025-01-06 12:53:06,003 - train - INFO -     val_WER_(Argmax): 1.0026613205465946
+2025-01-06 12:53:06,003 - train - INFO -     test_loss      : 1.9569539441407182
+2025-01-06 12:53:06,003 - train - INFO -     test_CER_(Argmax): 0.550261897981932
+2025-01-06 12:53:06,004 - train - INFO -     test_WER_(Argmax): 1.002047006662565
+2025-01-06 12:53:32,775 - train - INFO -     epoch          : 28
+2025-01-06 12:53:32,776 - train - INFO -     loss           : 1.7140053820610046
+2025-01-06 12:53:32,776 - train - INFO -     grad_norm      : 0.9999995279312134
+2025-01-06 12:53:32,776 - train - INFO -     val_loss       : 2.3576431388784598
+2025-01-06 12:53:32,776 - train - INFO -     val_CER_(Argmax): 0.7101239137269443
+2025-01-06 12:53:32,776 - train - INFO -     val_WER_(Argmax): 0.9986456952944905
+2025-01-06 12:53:32,776 - train - INFO -     test_loss      : 2.329993086006805
+2025-01-06 12:53:32,776 - train - INFO -     test_CER_(Argmax): 0.7077714287443992
+2025-01-06 12:53:32,776 - train - INFO -     test_WER_(Argmax): 0.9963702500015197
+2025-01-06 12:54:00,064 - train - INFO -     epoch          : 29
+2025-01-06 12:54:00,065 - train - INFO -     loss           : 1.699735243320465
+2025-01-06 12:54:00,065 - train - INFO -     grad_norm      : 0.9999995148181915
+2025-01-06 12:54:00,065 - train - INFO -     val_loss       : 2.1005933034024116
+2025-01-06 12:54:00,065 - train - INFO -     val_CER_(Argmax): 0.6064282216141359
+2025-01-06 12:54:00,065 - train - INFO -     val_WER_(Argmax): 1.0348914896721142
+2025-01-06 12:54:00,065 - train - INFO -     test_loss      : 2.0394496312578214
+2025-01-06 12:54:00,065 - train - INFO -     test_CER_(Argmax): 0.5932466852323163
+2025-01-06 12:54:00,066 - train - INFO -     test_WER_(Argmax): 1.0366259097913377
+2025-01-06 12:54:26,533 - train - INFO -     epoch          : 30
+2025-01-06 12:54:26,533 - train - INFO -     loss           : 1.687394163608551
+2025-01-06 12:54:26,534 - train - INFO -     grad_norm      : 0.9999995195865631
+2025-01-06 12:54:26,534 - train - INFO -     val_loss       : 2.227592076322689
+2025-01-06 12:54:26,534 - train - INFO -     val_CER_(Argmax): 0.5817018810262675
+2025-01-06 12:54:26,534 - train - INFO -     val_WER_(Argmax): 1.0762593318584428
+2025-01-06 12:54:26,534 - train - INFO -     test_loss      : 2.1519164684164616
+2025-01-06 12:54:26,534 - train - INFO -     test_CER_(Argmax): 0.5686027726398527
+2025-01-06 12:54:26,534 - train - INFO -     test_WER_(Argmax): 1.0769723310271861
+2025-01-06 12:54:26,558 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch30.pth ...
+2025-01-06 12:54:52,891 - train - INFO -     epoch          : 31
+2025-01-06 12:54:52,892 - train - INFO -     loss           : 1.6976933884620666
+2025-01-06 12:54:52,892 - train - INFO -     grad_norm      : 0.9999995040893555
+2025-01-06 12:54:52,892 - train - INFO -     val_loss       : 2.206731840693203
+2025-01-06 12:54:52,892 - train - INFO -     val_CER_(Argmax): 0.5790061463009012
+2025-01-06 12:54:52,892 - train - INFO -     val_WER_(Argmax): 1.0840257626613985
+2025-01-06 12:54:52,893 - train - INFO -     test_loss      : 2.1282869422708757
+2025-01-06 12:54:52,893 - train - INFO -     test_CER_(Argmax): 0.5656737411624639
+2025-01-06 12:54:52,893 - train - INFO -     test_WER_(Argmax): 1.082614399224263
+2025-01-06 12:55:19,363 - train - INFO -     epoch          : 32
+2025-01-06 12:55:19,363 - train - INFO -     loss           : 1.6594320011138917
+2025-01-06 12:55:19,363 - train - INFO -     grad_norm      : 0.9999995231628418
+2025-01-06 12:55:19,364 - train - INFO -     val_loss       : 1.9649792249792177
+2025-01-06 12:55:19,364 - train - INFO -     val_CER_(Argmax): 0.568660367988739
+2025-01-06 12:55:19,364 - train - INFO -     val_WER_(Argmax): 1.0573235923896933
+2025-01-06 12:55:19,364 - train - INFO -     test_loss      : 1.8914390634034426
+2025-01-06 12:55:19,364 - train - INFO -     test_CER_(Argmax): 0.5531570777038797
+2025-01-06 12:55:19,364 - train - INFO -     test_WER_(Argmax): 1.0572304435847248
+2025-01-06 12:55:46,206 - train - INFO -     epoch          : 33
+2025-01-06 12:55:46,206 - train - INFO -     loss           : 1.6451284074783326
+2025-01-06 12:55:46,206 - train - INFO -     grad_norm      : 0.9999995267391205
+2025-01-06 12:55:46,206 - train - INFO -     val_loss       : 2.1015259779687296
+2025-01-06 12:55:46,207 - train - INFO -     val_CER_(Argmax): 0.576527079374239
+2025-01-06 12:55:46,207 - train - INFO -     val_WER_(Argmax): 1.0403987465701505
+2025-01-06 12:55:46,207 - train - INFO -     test_loss      : 2.0231227033010875
+2025-01-06 12:55:46,207 - train - INFO -     test_CER_(Argmax): 0.5629015888336617
+2025-01-06 12:55:46,207 - train - INFO -     test_WER_(Argmax): 1.039035889792373
+2025-01-06 12:56:13,013 - train - INFO -     epoch          : 34
+2025-01-06 12:56:13,013 - train - INFO -     loss           : 1.6592886781692504
+2025-01-06 12:56:13,013 - train - INFO -     grad_norm      : 0.9999995362758637
+2025-01-06 12:56:13,014 - train - INFO -     val_loss       : 1.742005027088292
+2025-01-06 12:56:13,014 - train - INFO -     val_CER_(Argmax): 0.5204233599341507
+2025-01-06 12:56:13,014 - train - INFO -     val_WER_(Argmax): 1.0035599140059897
+2025-01-06 12:56:13,014 - train - INFO -     test_loss      : 1.6675148811049134
+2025-01-06 12:56:13,014 - train - INFO -     test_CER_(Argmax): 0.502839955259418
+2025-01-06 12:56:13,014 - train - INFO -     test_WER_(Argmax): 0.9941316323274445
+2025-01-06 12:56:39,649 - train - INFO -     epoch          : 35
+2025-01-06 12:56:39,649 - train - INFO -     loss           : 1.6350404047966003
+2025-01-06 12:56:39,650 - train - INFO -     grad_norm      : 0.9999995386600494
+2025-01-06 12:56:39,650 - train - INFO -     val_loss       : 1.8403682686745901
+2025-01-06 12:56:39,650 - train - INFO -     val_CER_(Argmax): 0.5275641065654746
+2025-01-06 12:56:39,650 - train - INFO -     val_WER_(Argmax): 1.0048236872090404
+2025-01-06 12:56:39,650 - train - INFO -     test_loss      : 1.7607830703713512
+2025-01-06 12:56:39,650 - train - INFO -     test_CER_(Argmax): 0.511634243578231
+2025-01-06 12:56:39,650 - train - INFO -     test_WER_(Argmax): 0.9960755441862791
+2025-01-06 12:56:39,675 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch35.pth ...
+2025-01-06 12:57:06,195 - train - INFO -     epoch          : 36
+2025-01-06 12:57:06,195 - train - INFO -     loss           : 1.6158382558822633
+2025-01-06 12:57:06,195 - train - INFO -     grad_norm      : 0.9999995386600494
+2025-01-06 12:57:06,195 - train - INFO -     val_loss       : 2.1838382130619345
+2025-01-06 12:57:06,195 - train - INFO -     val_CER_(Argmax): 0.6197624802152938
+2025-01-06 12:57:06,196 - train - INFO -     val_WER_(Argmax): 1.0449884751533038
+2025-01-06 12:57:06,196 - train - INFO -     test_loss      : 2.1367342508476197
+2025-01-06 12:57:06,196 - train - INFO -     test_CER_(Argmax): 0.6091165121979155
+2025-01-06 12:57:06,196 - train - INFO -     test_WER_(Argmax): 1.0489210634070716
+2025-01-06 12:57:32,731 - train - INFO -     epoch          : 37
+2025-01-06 12:57:32,732 - train - INFO -     loss           : 1.6241720056533813
+2025-01-06 12:57:32,732 - train - INFO -     grad_norm      : 0.9999995291233063
+2025-01-06 12:57:32,732 - train - INFO -     val_loss       : 2.146881133427919
+2025-01-06 12:57:32,732 - train - INFO -     val_CER_(Argmax): 0.6299282110468536
+2025-01-06 12:57:32,732 - train - INFO -     val_WER_(Argmax): 1.0583529581303146
+2025-01-06 12:57:32,732 - train - INFO -     test_loss      : 2.107406714490352
+2025-01-06 12:57:32,732 - train - INFO -     test_CER_(Argmax): 0.620725016647034
+2025-01-06 12:57:32,733 - train - INFO -     test_WER_(Argmax): 1.0629834820002357
+2025-01-06 12:57:59,102 - train - INFO -     epoch          : 38
+2025-01-06 12:57:59,102 - train - INFO -     loss           : 1.623783996105194
+2025-01-06 12:57:59,102 - train - INFO -     grad_norm      : 0.9999995291233063
+2025-01-06 12:57:59,102 - train - INFO -     val_loss       : 1.906246748797568
+2025-01-06 12:57:59,103 - train - INFO -     val_CER_(Argmax): 0.5596696956195534
+2025-01-06 12:57:59,103 - train - INFO -     val_WER_(Argmax): 1.0208460660250813
+2025-01-06 12:57:59,103 - train - INFO -     test_loss      : 1.826135470211961
+2025-01-06 12:57:59,103 - train - INFO -     test_CER_(Argmax): 0.5425744832658839
+2025-01-06 12:57:59,103 - train - INFO -     test_WER_(Argmax): 1.016643241283465
+2025-01-06 12:58:25,939 - train - INFO -     epoch          : 39
+2025-01-06 12:58:25,939 - train - INFO -     loss           : 1.6481927490234376
+2025-01-06 12:58:25,940 - train - INFO -     grad_norm      : 0.9999995493888855
+2025-01-06 12:58:25,940 - train - INFO -     val_loss       : 2.082506364561975
+2025-01-06 12:58:25,940 - train - INFO -     val_CER_(Argmax): 0.6344460908240117
+2025-01-06 12:58:25,940 - train - INFO -     val_WER_(Argmax): 1.0151343463557712
+2025-01-06 12:58:25,940 - train - INFO -     test_loss      : 2.042917174692372
+2025-01-06 12:58:25,940 - train - INFO -     test_CER_(Argmax): 0.6257287471579843
+2025-01-06 12:58:25,940 - train - INFO -     test_WER_(Argmax): 1.0169318640293907
+2025-01-06 12:58:52,792 - train - INFO -     epoch          : 40
+2025-01-06 12:58:52,792 - train - INFO -     loss           : 1.6144716930389404
+2025-01-06 12:58:52,792 - train - INFO -     grad_norm      : 0.9999995291233063
+2025-01-06 12:58:52,793 - train - INFO -     val_loss       : 2.1416390615195806
+2025-01-06 12:58:52,793 - train - INFO -     val_CER_(Argmax): 0.6017785741604752
+2025-01-06 12:58:52,793 - train - INFO -     val_WER_(Argmax): 1.0300454025700616
+2025-01-06 12:58:52,793 - train - INFO -     test_loss      : 2.088018307704052
+2025-01-06 12:58:52,793 - train - INFO -     test_CER_(Argmax): 0.5911563792530041
+2025-01-06 12:58:52,793 - train - INFO -     test_WER_(Argmax): 1.0322995130273251
+2025-01-06 12:58:52,818 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch40.pth ...
+2025-01-06 12:59:19,684 - train - INFO -     epoch          : 41
+2025-01-06 12:59:19,684 - train - INFO -     loss           : 1.6238997292518615
+2025-01-06 12:59:19,684 - train - INFO -     grad_norm      : 0.9999995517730713
+2025-01-06 12:59:19,684 - train - INFO -     val_loss       : 1.9683832862720279
+2025-01-06 12:59:19,684 - train - INFO -     val_CER_(Argmax): 0.5901474230587367
+2025-01-06 12:59:19,685 - train - INFO -     val_WER_(Argmax): 1.0349252028327787
+2025-01-06 12:59:19,685 - train - INFO -     test_loss      : 1.900356005166323
+2025-01-06 12:59:19,685 - train - INFO -     test_CER_(Argmax): 0.57420668221101
+2025-01-06 12:59:19,685 - train - INFO -     test_WER_(Argmax): 1.0364380765229146
+2025-01-06 12:59:46,418 - train - INFO -     epoch          : 42
+2025-01-06 12:59:46,418 - train - INFO -     loss           : 1.6207468867301942
+2025-01-06 12:59:46,419 - train - INFO -     grad_norm      : 0.9999995350837707
+2025-01-06 12:59:46,419 - train - INFO -     val_loss       : 1.8939028010597088
+2025-01-06 12:59:46,419 - train - INFO -     val_CER_(Argmax): 0.5423911848133289
+2025-01-06 12:59:46,419 - train - INFO -     val_WER_(Argmax): 1.035425799399333
+2025-01-06 12:59:46,419 - train - INFO -     test_loss      : 1.8077261607155546
+2025-01-06 12:59:46,419 - train - INFO -     test_CER_(Argmax): 0.5255486681559878
+2025-01-06 12:59:46,419 - train - INFO -     test_WER_(Argmax): 1.0252716749878643
+2025-01-06 13:00:13,463 - train - INFO -     epoch          : 43
+2025-01-06 13:00:13,463 - train - INFO -     loss           : 1.6028892469406129
+2025-01-06 13:00:13,464 - train - INFO -     grad_norm      : 0.9999995255470275
+2025-01-06 13:00:13,464 - train - INFO -     val_loss       : 2.094631169994819
+2025-01-06 13:00:13,464 - train - INFO -     val_CER_(Argmax): 0.5946640196674342
+2025-01-06 13:00:13,464 - train - INFO -     val_WER_(Argmax): 1.0513387877327418
+2025-01-06 13:00:13,464 - train - INFO -     test_loss      : 2.0356841619688137
+2025-01-06 13:00:13,464 - train - INFO -     test_CER_(Argmax): 0.58360957009123
+2025-01-06 13:00:13,464 - train - INFO -     test_WER_(Argmax): 1.0539740937524047
+2025-01-06 13:00:40,172 - train - INFO -     epoch          : 44
+2025-01-06 13:00:40,172 - train - INFO -     loss           : 1.5898489356040955
+2025-01-06 13:00:40,172 - train - INFO -     grad_norm      : 0.9999995291233063
+2025-01-06 13:00:40,172 - train - INFO -     val_loss       : 1.9890676706039598
+2025-01-06 13:00:40,172 - train - INFO -     val_CER_(Argmax): 0.5900526902764957
+2025-01-06 13:00:40,172 - train - INFO -     val_WER_(Argmax): 1.046841317132292
+2025-01-06 13:00:40,173 - train - INFO -     test_loss      : 1.9272570446247363
+2025-01-06 13:00:40,173 - train - INFO -     test_CER_(Argmax): 0.5761010633907409
+2025-01-06 13:00:40,173 - train - INFO -     test_WER_(Argmax): 1.0492256599337115
+2025-01-06 13:01:06,813 - train - INFO -     epoch          : 45
+2025-01-06 13:01:06,813 - train - INFO -     loss           : 1.5976574420928955
+2025-01-06 13:01:06,813 - train - INFO -     grad_norm      : 0.9999995315074921
+2025-01-06 13:01:06,814 - train - INFO -     val_loss       : 2.0105614943697883
+2025-01-06 13:01:06,814 - train - INFO -     val_CER_(Argmax): 0.5734687861476939
+2025-01-06 13:01:06,814 - train - INFO -     val_WER_(Argmax): 1.06223748000201
+2025-01-06 13:01:06,814 - train - INFO -     test_loss      : 1.935053793983605
+2025-01-06 13:01:06,814 - train - INFO -     test_CER_(Argmax): 0.559638335388558
+2025-01-06 13:01:06,814 - train - INFO -     test_WER_(Argmax): 1.0638279324125148
+2025-01-06 13:01:06,838 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch45.pth ...
+2025-01-06 13:01:33,521 - train - INFO -     epoch          : 46
+2025-01-06 13:01:33,522 - train - INFO -     loss           : 1.6023759031295777
+2025-01-06 13:01:33,522 - train - INFO -     grad_norm      : 0.9999995350837707
+2025-01-06 13:01:33,522 - train - INFO -     val_loss       : 2.0255279021949346
+2025-01-06 13:01:33,522 - train - INFO -     val_CER_(Argmax): 0.5940153743245056
+2025-01-06 13:01:33,522 - train - INFO -     val_WER_(Argmax): 1.047956803846803
+2025-01-06 13:01:33,522 - train - INFO -     test_loss      : 1.962324640223088
+2025-01-06 13:01:33,522 - train - INFO -     test_CER_(Argmax): 0.5800070311659139
+2025-01-06 13:01:33,523 - train - INFO -     test_WER_(Argmax): 1.0537000106326808
+2025-01-06 13:02:00,370 - train - INFO -     epoch          : 47
+2025-01-06 13:02:00,370 - train - INFO -     loss           : 1.5928210806846619
+2025-01-06 13:02:00,370 - train - INFO -     grad_norm      : 0.9999995255470275
+2025-01-06 13:02:00,371 - train - INFO -     val_loss       : 2.0171763698993135
+2025-01-06 13:02:00,371 - train - INFO -     val_CER_(Argmax): 0.591605366661943
+2025-01-06 13:02:00,371 - train - INFO -     val_WER_(Argmax): 1.0457244371617227
+2025-01-06 13:02:00,371 - train - INFO -     test_loss      : 1.9554129515895406
+2025-01-06 13:02:00,371 - train - INFO -     test_CER_(Argmax): 0.5784500023812065
+2025-01-06 13:02:00,371 - train - INFO -     test_WER_(Argmax): 1.0466966350136466
+2025-01-06 13:02:27,232 - train - INFO -     epoch          : 48
+2025-01-06 13:02:27,232 - train - INFO -     loss           : 1.5800175309181212
+2025-01-06 13:02:27,232 - train - INFO -     grad_norm      : 0.9999995064735413
+2025-01-06 13:02:27,232 - train - INFO -     val_loss       : 1.7334764835139482
+2025-01-06 13:02:27,232 - train - INFO -     val_CER_(Argmax): 0.515262928680664
+2025-01-06 13:02:27,232 - train - INFO -     val_WER_(Argmax): 1.0026386922348889
+2025-01-06 13:02:27,233 - train - INFO -     test_loss      : 1.652218789089727
+2025-01-06 13:02:27,233 - train - INFO -     test_CER_(Argmax): 0.4984974322629348
+2025-01-06 13:02:27,233 - train - INFO -     test_WER_(Argmax): 0.9900836221804025
+2025-01-06 13:02:54,196 - train - INFO -     epoch          : 49
+2025-01-06 13:02:54,196 - train - INFO -     loss           : 1.5879457521438598
+2025-01-06 13:02:54,196 - train - INFO -     grad_norm      : 0.9999995243549347
+2025-01-06 13:02:54,197 - train - INFO -     val_loss       : 2.0432179620785025
+2025-01-06 13:02:54,197 - train - INFO -     val_CER_(Argmax): 0.5926014252128645
+2025-01-06 13:02:54,197 - train - INFO -     val_WER_(Argmax): 1.0430243184599939
+2025-01-06 13:02:54,197 - train - INFO -     test_loss      : 1.9819173999415098
+2025-01-06 13:02:54,197 - train - INFO -     test_CER_(Argmax): 0.579572622106699
+2025-01-06 13:02:54,197 - train - INFO -     test_WER_(Argmax): 1.0442620155003948
+2025-01-06 13:03:21,246 - train - INFO -     epoch          : 50
+2025-01-06 13:03:21,247 - train - INFO -     loss           : 1.6114368653297424
+2025-01-06 13:03:21,247 - train - INFO -     grad_norm      : 0.9999995183944702
+2025-01-06 13:03:21,247 - train - INFO -     val_loss       : 1.7525301960561548
+2025-01-06 13:03:21,247 - train - INFO -     val_CER_(Argmax): 0.5193018113211884
+2025-01-06 13:03:21,247 - train - INFO -     val_WER_(Argmax): 1.0045242759332054
+2025-01-06 13:03:21,247 - train - INFO -     test_loss      : 1.6705436374394949
+2025-01-06 13:03:21,247 - train - INFO -     test_CER_(Argmax): 0.5022141993179482
+2025-01-06 13:03:21,247 - train - INFO -     test_WER_(Argmax): 0.9921409520656396
+2025-01-06 13:03:21,270 - train - INFO - Saving checkpoint: /media/pavel/2TBDRIVE/dl_sound/new_template/pytorch_project_template/new_model/testing_1/checkpoint-epoch50.pth ...
