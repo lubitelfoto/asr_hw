@@ -28,7 +28,7 @@ def download_file():
     # https://drive.google.com/file/d/1bOAs5OpciCVf7dXNrO6qF7UcM7pVKVPI/view?usp=sharing
 
     file_id = "1bOAs5OpciCVf7dXNrO6qF7UcM7pVKVPI"
-    save_dir = "new_saved/testing_1/"
+    save_dir = "new_model/testing_1/"
     file_name = "model_best.pth"
 
     os.makedirs(save_dir, exist_ok=True)
