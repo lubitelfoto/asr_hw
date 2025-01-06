@@ -31,4 +31,4 @@ python inference.py
 
 Там явно что-то не то, лосс из отрицательного быстро выходит на плато ~2.35 и зависает там,
 без градиент клиппинга градиент норм за несколько эпох уходит в бесконечность.
-[Ссылка на wandb](https://api.wandb.ai/links/titan_foundation/1k4xq6o9)
+[Ссылка на wandb](https://api.wandb.ai/links/titan_foundation/lqdk0w28)
